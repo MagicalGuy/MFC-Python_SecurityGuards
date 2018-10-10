@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{18A4EC89-CA89-409A-B796-0D1A7586C49B}</ProjectGuid>
+    <RootNamespace>QQPCMgr</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AntiScanDlg.cpp" />
+    <ClCompile Include="CClientSocket.cpp" />
+    <ClCompile Include="CMyList.cpp" />
+    <ClCompile Include="DlgSkin.cpp" />
+    <ClCompile Include="GdipButton.cpp" />
+    <ClCompile Include="Md5.cpp" />
+    <ClCompile Include="MsconfigDlg.cpp" />
+    <ClCompile Include="QQCleanDlg.cpp" />
+    <ClCompile Include="QQPCMgr.cpp" />
+    <ClCompile Include="QQPCMgrDlg.cpp" />
+    <ClCompile Include="RocketDlg.cpp" />
+    <ClCompile Include="ServicesDlg.cpp" />
+    <ClCompile Include="SoftWaresDlg.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="UI\Base\ControlBase.cpp" />
+    <ClCompile Include="UI\Base\GlobalFunction.cpp" />
+    <ClCompile Include="UI\Base\MessageInterface.cpp" />
+    <ClCompile Include="UI\Button\ButtonEx.cpp" />
+    <ClCompile Include="UI\Button\CheckButton.cpp" />
+    <ClCompile Include="UI\Button\HideButton.cpp" />
+    <ClCompile Include="UI\Button\ImageButton.cpp" />
+    <ClCompile Include="UI\Button\LinkButton.cpp" />
+    <ClCompile Include="UI\Button\TextButton.cpp" />
+    <ClCompile Include="UI\Dialog\DlgBase.cpp" />
+    <ClCompile Include="UI\Dialog\DlgPopup.cpp" />
+    <ClCompile Include="UI\List\ListEx.cpp" />
+    <ClCompile Include="UI\Menu\MenuEx.cpp" />
+    <ClCompile Include="UI\Menu\MenuItem.cpp" />
+    <ClCompile Include="UI\Other\Area.cpp" />
+    <ClCompile Include="UI\Other\Frame.cpp" />
+    <ClCompile Include="UI\Other\ImageString.cpp" />
+    <ClCompile Include="UI\Other\Line.cpp" />
+    <ClCompile Include="UI\Other\Runing.cpp" />
+    <ClCompile Include="UI\Other\Scroll.cpp" />
+    <ClCompile Include="UI\Other\SelectBox.cpp" />
+    <ClCompile Include="UI\Picture\Picture.cpp" />
+    <ClCompile Include="UI\Progress\Progress.cpp" />
+    <ClCompile Include="UI\Tab\Tab.cpp" />
+    <ClCompile Include="UI\Text\StaticText.cpp" />
+    <ClCompile Include="UI\Timer\Timer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AntiScanDlg.h" />
+    <ClInclude Include="CClientSocket.h" />
+    <ClInclude Include="CGdipButton.h" />
+    <ClInclude Include="CGdiPlusBitmap.h" />
+    <ClInclude Include="CMyList.h" />
+    <ClInclude Include="Datatype.h" />
+    <ClInclude Include="DlgSkin.h" />
+    <ClInclude Include="GCMemDC.h" />
+    <ClInclude Include="ID.h" />
+    <ClInclude Include="Md5.h" />
+    <ClInclude Include="MsconfigDlg.h" />
+    <ClInclude Include="QQCleanDlg.h" />
+    <ClInclude Include="QQPCMgr.h" />
+    <ClInclude Include="QQPCMgrDlg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="RocketDlg.h" />
+    <ClInclude Include="ServicesDlg.h" />
+    <ClInclude Include="SoftWaresDlg.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="UI\Base\ControlBase.h" />
+    <ClInclude Include="UI\Base\GlobalFunction.h" />
+    <ClInclude Include="UI\Base\MessageInterface.h" />
+    <ClInclude Include="UI\Button\ButtonEx.h" />
+    <ClInclude Include="UI\Button\CheckButton.h" />
+    <ClInclude Include="UI\Button\HideButton.h" />
+    <ClInclude Include="UI\Button\ImageButton.h" />
+    <ClInclude Include="UI\Button\LinkButton.h" />
+    <ClInclude Include="UI\Button\TextButton.h" />
+    <ClInclude Include="UI\Dialog\DlgBase.h" />
+    <ClInclude Include="UI\Dialog\DlgPopup.h" />
+    <ClInclude Include="UI\IceDUI.h" />
+    <ClInclude Include="UI\List\ListEx.h" />
+    <ClInclude Include="UI\Menu\MenuEx.h" />
+    <ClInclude Include="UI\Menu\MenuItem.h" />
+    <ClInclude Include="UI\Other\Area.h" />
+    <ClInclude Include="UI\Other\Frame.h" />
+    <ClInclude Include="UI\Other\ImageString.h" />
+    <ClInclude Include="UI\Other\Line.h" />
+    <ClInclude Include="UI\Other\Runing.h" />
+    <ClInclude Include="UI\Other\Scroll.h" />
+    <ClInclude Include="UI\Other\SelectBox.h" />
+    <ClInclude Include="UI\Picture\Picture.h" />
+    <ClInclude Include="UI\Progress\Progress.h" />
+    <ClInclude Include="UI\Tab\Tab.h" />
+    <ClInclude Include="UI\Text\StaticText.h" />
+    <ClInclude Include="UI\Timer\Timer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\BT_ALL_DETECT.png" />
+    <Image Include="res\BT_BOX.png" />
+    <Image Include="res\BT_CANCEL.png" />
+    <Image Include="res\BT_CLOSE.png" />
+    <Image Include="res\BT_DEFAULT.png" />
+    <Image Include="res\BT_DETECT_ONECLICK.png" />
+    <Image Include="res\BT_FEEDBACK.png" />
+    <Image Include="res\BT_MENU.png" />
+    <Image Include="res\BT_MIN.png" />
+    <Image Include="res\BT_ScrollDown.png" />
+    <Image Include="res\BT_ScrollUp.png" />
+    <Image Include="res\BT_SCROLL_DOWN.png" />
+    <Image Include="res\BT_SCROLL_UP.png" />
+    <Image Include="res\BT_SKIN.png" />
+    <Image Include="res\BT_SKIN_COLOR.png" />
+    <Image Include="res\BT_SKIN_CUSTOMIZE.png" />
+    <Image Include="res\BT_SKIN_IMAGE.png" />
+    <Image Include="res\DangerNumber.png" />
+    <Image Include="res\head_bkg_highlight.png" />
+    <Image Include="res\head_bkg__normal.png" />
+    <Image Include="res\HEAD_QQ.png" />
+    <Image Include="res\HintNumber.png" />
+    <Image Include="res\HPScanStatus.png" />
+    <Image Include="res\hp_score_autocancelfix_tips.png" />
+    <Image Include="res\hp_score_autocancelscan_tips.png" />
+    <Image Include="res\hp_score_cancelfix_tips.png" />
+    <Image Include="res\hp_score_cancelscan_tips.png" />
+    <Image Include="res\hp_score_fix_tips.png" />
+    <Image Include="res\hp_score_lastcancel_tips.png" />
+    <Image Include="res\hp_score_last_tips.png" />
+    <Image Include="res\hp_score_never_tips.png" />
+    <Image Include="res\hp_score_scanning_tips.png" />
+    <Image Include="res\hp_score_tips.png" />
+    <Image Include="res\LOGO.png" />
+    <Image Include="res\menuex_back.png" />
+    <Image Include="res\MENU_BBS.png" />
+    <Image Include="res\MENU_UPDATE.png" />
+    <Image Include="res\Progress.png" />
+    <Image Include="res\progress_light.png" />
+    <Image Include="res\QQPCMgr.ico" />
+    <Image Include="res\QQPCMgr_bkg.png" />
+    <Image Include="res\rocket.png" />
+    <Image Include="res\running.png" />
+    <Image Include="res\scrollbar.png" />
+    <Image Include="res\SCROLL_V.png" />
+    <Image Include="res\SefaNumber.png" />
+    <Image Include="res\SkinBkg.png" />
+    <Image Include="res\SkinPushedBkg.png" />
+    <Image Include="res\SKIN_PIC_0.png" />
+    <Image Include="res\SKIN_PIC_1.png" />
+    <Image Include="res\SKIN_PIC_2.png" />
+    <Image Include="res\SKIN_PIC_3.png" />
+    <Image Include="res\SKIN_PIC_4.png" />
+    <Image Include="res\SKIN_PIC_5.png" />
+    <Image Include="res\SKIN_PIC_6.png" />
+    <Image Include="res\SKIN_PIC_7.png" />
+    <Image Include="res\SKIN_PIC_8.png" />
+    <Image Include="res\SKIN_PIC_SMALL_0.png" />
+    <Image Include="res\SKIN_PIC_SMALL_1.png" />
+    <Image Include="res\SKIN_PIC_SMALL_2.png" />
+    <Image Include="res\SKIN_PIC_SMALL_3.png" />
+    <Image Include="res\SKIN_PIC_SMALL_4.png" />
+    <Image Include="res\SKIN_PIC_SMALL_5.png" />
+    <Image Include="res\SKIN_PIC_SMALL_6.png" />
+    <Image Include="res\SKIN_PIC_SMALL_7.png" />
+    <Image Include="res\SKIN_PIC_SMALL_8.png" />
+    <Image Include="res\Tab1.png" />
+    <Image Include="res\Tab2.png" />
+    <Image Include="res\Tab3.png" />
+    <Image Include="res\Tab4.png" />
+    <Image Include="res\Tab5.png" />
+    <Image Include="res\Tab6.png" />
+    <Image Include="res\Tab7.png" />
+    <Image Include="res\Tab_seperator.png" />
+    <Image Include="res\Virus.png" />
+    <Image Include="res\WebSit.png" />
+    <Image Include="res\Web_Danger.png" />
+    <Image Include="res\WhiteNumber.png" />
+    <Image Include="res\WindowsBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="QQPCMgr.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\QQPCMgr.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="QQPCMgr.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
